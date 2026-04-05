@@ -1,0 +1,64 @@
+name: Refactor
+description: 既存実装や構成の改善を提案する
+title: "[Refactor] "
+labels:
+  - refactor
+body:
+  - type: markdown
+    attributes:
+      value: |
+        既存の構成や実装の改善案を整理して記載してください。
+
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象
+      description: どのファイル、機能、運用フローを改善対象とするかを記載してください。
+      placeholder: "例: .github/ISSUE_TEMPLATE 配下のテンプレート構成"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: 現状の課題
+      description: 何が問題で、なぜ改善が必要かを記載してください。
+      placeholder: 保守性、重複、可読性、運用上の課題など
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改善方針
+      description: どのように改善したいかを記載してください。
+      placeholder: "例: 共通項目を整理し、テンプレートの粒度をそろえる"
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 対象外
+      description: 今回の改善に含めない内容を記載してください。対象外がない場合は「なし」と記載してください。
+      placeholder: "例: 文言見直しのみ対象とし、運用ルール変更は対象外"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: 改善完了を確認するための条件を、第三者が検証できる具体的な条件で記載してください。
+      placeholder: |
+        - [ ] 重複定義が削除され、定義箇所が一箇所に統一されている
+        - [ ] 既存機能の回帰不具合が発生していない
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 影響範囲・懸念点
+      description: 影響する範囲や注意点があれば記載してください。
+      placeholder: 関連箇所、移行時の注意点など

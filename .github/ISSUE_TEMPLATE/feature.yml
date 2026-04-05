@@ -1,0 +1,78 @@
+name: "Feature"
+description: "新機能追加や利用者価値を高める機能改善を提案する"
+title: "[Feature] "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        実現したい機能や改善内容を整理して記載してください。
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: 概要
+      description: 何を実現したいかを簡潔に記載してください。
+      placeholder: "例: Issue テンプレートを導入し、記載内容を標準化する"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・目的
+      description: なぜ必要なのか、どの課題を解決したいのか、期待する効果や目標値を記載してください。
+      placeholder: "現状の課題、期待する効果、利用シーン、改善したい指標（例: 作業時間を30%短縮）など"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 対象範囲
+      description: どの機能、利用者、運用に影響するかを記載してください。
+      placeholder: "例: Issue 作成フロー全体、開発メンバー全員が対象"
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 対象外
+      description: 今回の対応に含めない内容を記載してください。対象外がない場合は「なし」と記載してください。
+      placeholder: "例: PR テンプレートの整備は今回の対象外"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: 完了と判断できる条件を、第三者が確認できる具体的な条件でチェックリスト形式にしてください。
+      placeholder: |
+        - [ ] 対象機能を想定手順で利用できる
+        - [ ] 必須未入力時に保存できない
+        - [ ] 関連機能に回帰不具合がない
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: 確認方法
+      description: 実装後にどのように確認するかを、確認観点、確認手順、期待結果を含めて記載してください。
+      placeholder: |
+        例:
+        - 対象機能が利用できることを確認する
+        - 異常入力時に想定どおりエラーになることを確認する
+        - 関連機能に影響がないことを確認する
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 関連資料、検討メモ、参考リンクなどがあれば記載してください。
+      placeholder: 補足情報があれば記載

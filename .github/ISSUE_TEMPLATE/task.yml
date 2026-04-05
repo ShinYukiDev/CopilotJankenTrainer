@@ -1,0 +1,71 @@
+name: Task
+description: 定型作業やその他の対応タスクを起票する
+title: "[Task] "
+labels:
+  - task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        実施するタスクの内容と完了条件を整理して記載してください。
+
+  - type: textarea
+    id: task-summary
+    attributes:
+      label: 内容
+      description: 実施する内容を簡潔に記載してください。
+      placeholder: "例: Issue テンプレートの運用ルールを README に追記する"
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的
+      description: このタスクを実施する理由や背景を記載してください。
+      placeholder: 目的や期待する効果を記載
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 対象範囲
+      description: 対象となるファイル、機能、関係者、運用範囲を記載してください。
+      placeholder: "例: README と .github 配下の設定ファイルが対象"
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 対象外
+      description: 今回のタスクに含めない内容を記載してください。対象外がない場合は「なし」と記載してください。
+      placeholder: "例: 実装後の周知対応は別タスクで実施"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: 完了とみなす条件を、第三者が検証できる具体的な条件でチェックリスト形式に記載してください。
+      placeholder: |
+        - [ ] 対象ファイルが更新され、差分が確認できる
+        - [ ] 関連手順どおりに実施して期待結果になる
+    validations:
+      required: true
+
+  - type: input
+    id: related-issue
+    attributes:
+      label: 関連 Issue
+      description: 関連する Issue 番号やリンクがあれば記載してください。
+      placeholder: "例: #1"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 補足事項や共有しておきたい情報があれば記載してください。
+      placeholder: 補足情報があれば記載
