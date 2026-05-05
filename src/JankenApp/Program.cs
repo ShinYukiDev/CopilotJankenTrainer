@@ -2,9 +2,9 @@
 
 Console.WriteLine("=== じゃんけんゲーム ===");
 Console.WriteLine("手を選んでください:");
-Console.WriteLine("  1: グー (Rock)");
-Console.WriteLine("  2: チョキ (Scissors)");
-Console.WriteLine("  3: パー (Paper)");
+Console.WriteLine("  1: 👊グー (Rock)");
+Console.WriteLine("  2: ✌️チョキ (Scissors)");
+Console.WriteLine("  3: 🖐️パー (Paper)");
 Console.Write("入力 > ");
 
 var input = Console.ReadLine()?.Trim();
