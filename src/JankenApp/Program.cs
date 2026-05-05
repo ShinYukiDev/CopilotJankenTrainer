@@ -11,6 +11,8 @@ var input = Console.ReadLine()?.Trim();
 if (!int.TryParse(input, out var choice) || choice < 1 || choice > 3)
 {
     Console.WriteLine("無効な入力です。1, 2, 3 のいずれかを入力してください。");
+    Console.WriteLine("Enterキーを押して終了してください...");
+    Console.ReadLine();
     return;
 }
 
@@ -32,6 +34,10 @@ Console.WriteLine(result switch
     GameResult.Draw => "結果: 引き分け！🤝",
     _ => "結果: 不明"
 });
+
+Console.WriteLine();
+Console.WriteLine("Enterキーを押して終了してください...");
+Console.ReadLine();
 
 static string HandToJapanese(Hand hand) => hand switch
 {
