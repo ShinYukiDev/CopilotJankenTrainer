@@ -3,9 +3,14 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {},
-  "extensions": [
-    "ms-dotnettools.csharp"
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit"
+      ],
+      "settings": {}
+    }
+  },
   "postCreateCommand": "dotnet restore"
 }
